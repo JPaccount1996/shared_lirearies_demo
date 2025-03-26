@@ -5,5 +5,5 @@ def docker_push(user,pass,image,repo){
   sh "docker push ${repo}/${image}"
 }
 def mavenci(branch,git_url) {
-  git branch: "${branch}", credentialsId: 'githubtoken', url: "${git_url}"
+  git branch: "${branch}", url: "${git_url}"
 }
