@@ -8,3 +8,8 @@ def gitStatusLogin(branch,url){
   //sh "mvn clean install"
   //sh "cp -R webapp/target/webapp.war ."
 }
+def gitStatus1(branch,url){
+  git branch: "${branch}", credentialsId: 'gitCred', url: "${url}"
+  sh "mvn clean install"
+  sh "cp -R webapp/target/webapp.war ."
+}
