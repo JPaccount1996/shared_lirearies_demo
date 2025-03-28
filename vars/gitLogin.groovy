@@ -12,6 +12,6 @@ def gitStatus1(branch,url){
   git branch: "${branch}", credentialsId: 'gitCred', url: "${url}"
   sh "mvn clean install"
   sh "cp -R webapp/target/webapp.war ."
-  sh "docker build -t appa:${BUILD_NUMBER} ."
-  sh "docker images"
+  //sh "docker build -t appa:${BUILD_NUMBER} ."
+  //sh "docker images"
 }
